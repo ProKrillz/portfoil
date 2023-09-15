@@ -1,5 +1,16 @@
 <script>
+    import { tweened } from "svelte/motion";
+
+    let navItems = ["Portfoile", "Projects", "Contact"]
+
+    const tweenedPortfoil = tweened(0);
     
+    $: percentWitdt = 0;
+    $: tweenedPortfoil.set(percentWitdt)
+    const HandleMouseOver = () => {
+        percentWitdt = 100;
+    }
+      
 </script>
 
 <header>
@@ -8,9 +19,11 @@
         <img src="./img/GitLogo.png"/>
     </a>
     <div class="nav-items">
-        <p>Portfoile</p>
-        <p>Contact</p>
+        {#each navItems as item}
+        <p style="width: ;" on:mouseover={HandleMouseOver}>{item}</p> 
+        {/each}
     </div>  
+     
 </header>
 
 <style>
@@ -32,18 +45,29 @@
     }
     .nav-items{
         margin-right: auto;
-        height: 50px;
         color: white;
         text-align: center;
-        margin-top: 32px;
+        display: flex;
+        margin-top: 15px;
     }
     p{
         display: inline;
         padding: 20px;
         font-size: 20px;
         cursor: pointer;
+        
     }
     p:hover{
         color: chartreuse;
     }
+    p::after{
+        height: 2px;
+        width: 0;
+        background: black;
+        display: block;
+        position: relative;
+        content: "";
+        margin-top: 5px;
+    }
+    
 </style>
