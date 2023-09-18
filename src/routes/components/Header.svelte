@@ -1,16 +1,7 @@
 <script>
-    import { tweened } from "svelte/motion";
-
-    let navItems = ["Portfoile", "Projects", "Contact"]
-
-    const tweenedPortfoil = tweened(0);
-    
-    $: percentWitdt = 0;
-    $: tweenedPortfoil.set(percentWitdt)
-    const HandleMouseOver = () => {
-        percentWitdt = 100;
-    }
-      
+    import {createEventDispatcher} from 'svelte'
+    const dispatch = createEventDispatcher();
+    let navItems = ["Portfoilo", "Projects", "Contact"]
 </script>
 
 <header>
@@ -20,10 +11,11 @@
     </a>
     <div class="nav-items">
         {#each navItems as item}
-        <p style="width: ;" on:mouseover={HandleMouseOver}>{item}</p> 
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+        <p on:click={() => dispatch('navChange', item)}>{item}</p> 
         {/each}
-    </div>  
-     
+    </div>      
 </header>
 
 <style>
@@ -44,11 +36,11 @@
         cursor: pointer;
     }
     .nav-items{
-        margin-right: auto;
+        margin-left: auto;
         color: white;
         text-align: center;
         display: flex;
-        margin-top: 15px;
+        margin-top: 13px;
     }
     p{
         display: inline;
@@ -58,16 +50,24 @@
         
     }
     p:hover{
-        color: chartreuse;
+        color: white;
     }
     p::after{
         height: 2px;
-        width: 0;
-        background: black;
+        width: 100%;
+        background: white;
         display: block;
         position: relative;
         content: "";
         margin-top: 5px;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    p:hover::after{
+ 
+        transform: scaleX(1);
+        transform-origin: bottom left;
     }
     
 </style>
