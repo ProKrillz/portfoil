@@ -13,6 +13,8 @@
         height: 80vh;
         animation: oppen 1s;
         animation-direction: alternate;
+        overflow: auto;
+        overflow-x: hidden;
     }
     @keyframes oppen{
         0% {bottom: -1000px;}

@@ -1,7 +1,9 @@
 <script>
     import {createEventDispatcher} from 'svelte'
+    
     const dispatch = createEventDispatcher();
-    let navItems = ["Portfoilo", "Projects", "Contact"]
+    
+    let navItems = ["Portfolio", "Projects", "Contact"]
 </script>
 
 <header>
@@ -46,8 +48,7 @@
         display: inline;
         padding: 20px;
         font-size: 20px;
-        cursor: pointer;
-        
+        cursor: pointer;  
     }
     p:hover{
         color: white;
@@ -65,9 +66,7 @@
         transition: transform 0.25s ease-out;
     }
     p:hover::after{
- 
         transform: scaleX(1);
         transform-origin: bottom left;
-    }
-    
+    }   
 </style>

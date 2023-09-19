@@ -18,7 +18,6 @@
         I am in a school internship where I code in C# and SQL.
     </p>
     <br>
-
     <Button on:click={() => dispatch('navChange', 'Projects')}>Projects</Button>
 </div>
 

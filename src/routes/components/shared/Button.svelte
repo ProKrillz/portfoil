@@ -29,4 +29,5 @@
         background: #f7f7f7;
         color: #9370DB;
     }
+    
 </style>
