@@ -6,8 +6,8 @@
     // https://devicon.dev/
 </script>
 
-<div class="headline">
-    <h1 class="portfoil">Hello There</h1>
+<div class="port-form">
+    <h1 class="headline">Hello There</h1>
 
     <p class="text-bold">
         Full stack developer
@@ -18,7 +18,7 @@
         I am in a school internship where I code in C# and SQL.
     </p>
     <br>
-    <Button on:click={() => dispatch('navChange', 'Projects')}>Projects</Button>
+    <Button class="purple hover-1 shadow" on:click={() => dispatch('navChange', 'Projects')}>Projects</Button>
 </div>
 
 <div class="code-icons">
@@ -33,14 +33,14 @@
 </div>
 
 <style>
-    .headline{
+    .port-form{
         text-align: center;
     }
     .text-bold{
         font-weight: 600;
         
     }
-    .portfoil{
+    .headline{
         font-family: Verdana, sans-serif;
     }
     svg{

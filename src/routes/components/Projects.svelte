@@ -3,12 +3,12 @@
     import Modal from "./shared/Modal.svelte";
     import ProjectDetail from "./ProjectDetail.svelte";
     
-    let showModal = false;
+    export let showModal = false;
     let targetProject = {};
-
+   
     const toggleModal = (project) =>{
-        showModal = !showModal;
-        targetProject = project;
+         showModal = !showModal;
+         targetProject = project;
     }
 </script>
 
@@ -26,7 +26,7 @@
         <p>{project.name}</p>
     </div>
     {/each}
-    <Modal {showModal} on:click={toggleModal}>
+    <Modal bind:showModal on:click={toggleModal}>
         <ProjectDetail {targetProject}></ProjectDetail>
     </Modal>
 </div>
@@ -49,7 +49,6 @@
     .project{
         display: flex;
         grid-row: auto;
-        grid-column: auto;
-        
+        grid-column: auto;  
     }
 </style>

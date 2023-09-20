@@ -3,7 +3,7 @@
 </script>
 
 <div class="project-form">
-    <h3>{targetProject.name}</h3>
+    <h3>{targetProject.name}</h3> 
 
     <p>Description</p>
     <div class="description">    
@@ -28,21 +28,30 @@
 
 <style>
     .project-form{
+        margin-top: 4px;
         padding: 2px;
     }
-    svg{
-        height: 50px;
-        margin-top: 10px;
-        transition: opacity 0.5s;
+    h3{
+        text-align: center;
+        flex: 1;
+        margin: 0;
+    }
+    p{
+        word-wrap: break-word;
+        padding: 0 10px;
     }
     .description{
         border: solid 1px;
         border-radius: 5px;
         margin-bottom: 15px;
     }
-    p{
-        word-wrap: break-word;
-        padding: 0 10px;
+    svg{
+        height: 50px;
+        margin-top: 10px;
+        transition: opacity 0.5s;
+    }
+    svg:hover{
+        opacity: 0.5;
     }
     .link-form{
         text-align: center;
@@ -72,8 +81,5 @@
     }
     .link:hover{
         color: blue;
-    }
-    svg:hover{
-        opacity: 0.5;
     }
 </style>

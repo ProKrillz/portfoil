@@ -1,6 +1,6 @@
 <script>
     import { fly, fade } from 'svelte/transition';
-    
+    import Button from './Button.svelte';
     export let showModal = false;
 </script>
   
@@ -8,8 +8,11 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div class="backdrop" transition:fade on:click|self>
-      <div class="modal" transition:fly={{ y: 800, duration: 700 }} >
-      <slot></slot>
+      <div class="modal" transition:fly={{ y: 800, duration: 700 }}>
+        <div class="button-close">
+          <Button class="red sm rouned hover-faded" on:click={() => showModal = false}>x</Button>
+        </div>
+      <slot/>
       </div>
   </div>
   {/if}
@@ -31,5 +34,9 @@
       margin: 10% auto;
       text-align: center;
       background: white;
+  }
+  .button-close{
+    position: absolute;
+    right: 10px;
   }
   </style>
