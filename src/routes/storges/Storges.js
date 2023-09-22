@@ -3,7 +3,7 @@ import { writable } from "svelte/store";
 const Projects = writable([
     {name: "Komponent Reol", link: "1231", github: "123", description: "123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123"},
     {name: "HF", link: "", github: "", description: ""},
-    {name: "HF", link: "", github: "", description: ""},
+    {name: "HF", link: "", github: "", description: "asdada"},
     {name: "HF", link: "", github: "", description: ""},
     {name: "HF", link: "", github: "", description: ""},
     {name: "HF", link: "", github: "", description: ""},

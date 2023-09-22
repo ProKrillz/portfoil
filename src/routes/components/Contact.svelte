@@ -2,12 +2,10 @@
 
 </script>
 
-<div class="headline">
+<div class="text-center">
     <h1>Contact</h1>
 </div>
 
 <style>
-    .headline{
-        text-align: center;
-    }
+
 </style>

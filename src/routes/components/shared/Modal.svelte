@@ -10,7 +10,7 @@
   <div class="backdrop" transition:fade on:click|self>
       <div class="modal" transition:fly={{ y: 800, duration: 700 }}>
         <div class="button-close">
-          <Button class="red sm rouned hover-faded" on:click={() => showModal = false}>x</Button>
+          <Button class="color-bg-red color-white sm rouned hover-faded" on:click={() => showModal = false}>x</Button>
         </div>
       <slot/>
       </div>

@@ -4,6 +4,7 @@
     import Projects from "./components/Projects.svelte";
     import Portfoilo from "./components/Portfoilo.svelte";
     import Contact from "./components/Contact.svelte";
+    import '../app.css'
 
     let activeItem = "Portfolio";
 

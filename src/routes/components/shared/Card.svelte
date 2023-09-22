@@ -1,36 +1,33 @@
 <script>
+    let CardProps = {
+	class:[$$restProps.class]
+	} 
     export let header;
+    export let hover = false;
 </script>
 
-<div class="card">
-    <div class="headline">
-        <h3> {header}</h3>   
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div class="card" class:hover-card={hover} on:click>
+    <div class="m-0 p-5 color-bg-purple color-white">
+        <h3 class="m-0 ml-8"> {header}</h3>   
     </div>
-    <div class="card-slot">
-
+    <div class="color-bg-silver-white m-0 p-5">
         <slot/>
     </div>
 </div>
 
 <style>
-.headline{
-    background-color: #9370DB;
-    color: white;
-    margin: 0;
-    padding: 5px;
-    
-}
 .card{
     border: solid 1px  #C0C0C0;
     width: 80%;
     border-radius: 2px;
 }
-.card-slot{
-    padding: 5px;
-    background: #F5F5F5;
+.hover-card{
+    cursor: pointer;
 }
-h3{
-    margin: 0;
-    margin-left: 8px;
+.hover-card:hover{
+    scale: 1.01;
+    box-shadow: 0px 4px 6px rgba(0,0,0.1,0.2);
 }
 </style>

@@ -16,22 +16,6 @@
         border-radius: 6px;
         padding: 8px 12px;    
     }
-    /* ------------------------ Colors ------------------------ */
-    .purple{
-        background: #9370DB;
-        color: white;
-    }
-    .red{
-        background: red;
-        color: white;
-    }
-    /* ------------------------ Size ------------------------ */
-    .sm{
-        font-size: 1em;
-    }
-    .lg{
-        font-size: 2em;
-    }
      /* ------------------------ hover ------------------------ */
     .hover-1{
         text-decoration: none;
@@ -42,14 +26,6 @@
         background: #f7f7f7;
         color: #9370DB;
     }
-    .hover-faded{
-        transition: opacity 0.5s;
-    } 
-    .hover-faded:hover{
-        opacity: 0.5;
-    }
-     /* ------------------------ placement ------------------------ */
-
      /* ------------------------ other ------------------------ */
     .rouned{
         border-radius: 50%;
