@@ -80,5 +80,9 @@
     .headline{
         font-family: Verdana, sans-serif;
     }
-
+    @media only screen and (max-width: 768px){
+        .headline{
+        font-size: medium;
+    }
+}
 </style>

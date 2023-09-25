@@ -42,5 +42,9 @@
     p:hover::after{
         transform: scaleX(1);
         transform-origin: bottom left;
-    }   
+    }
+    @media only screen and (max-width: 768px){
+        
+           
+    }
 </style>
