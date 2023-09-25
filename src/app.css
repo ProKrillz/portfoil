@@ -8,12 +8,17 @@
 .color-white{
     color: white;
 }
+.color-bg-white{
+    background: white;
+}
 .color-bg-silver-white{
     background: #F5F5F5;
 }
 .color-bg-red{
     background: red;
 }
+.filler-white{
+    filter: brightness(0) invert(1);}
 /* --------------------------------- size --------------------------------- */
 .sm{
     font-size: 1em;

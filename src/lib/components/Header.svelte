@@ -1,5 +1,6 @@
 <script>
     import {createEventDispatcher} from 'svelte'
+    import Github from './icons/Github.svelte';
     
     const dispatch = createEventDispatcher();
     
@@ -7,9 +8,10 @@
 </script>
 
 <header class="d-flex p-5">
-    <!-- svelte-ignore a11y-missing-attribute -->
-    <a class="h-p-100 mr-a" href="https://github.com/ProKrillz" target="_blank">
-        <img class="pointer h-p-100" src="./img/GitLogo.png"/>
+    
+    <a class="mr-a" href="https://github.com/ProKrillz" target="_blank">
+        <!-- <img class="pointer h-p-100" src="./img/GitLogo.png"/> -->
+        <Github class="logo filler-white hover-faded"/>
     </a>
     <div class="d-flex color-white ml-a mt-13 text-center">
         {#each navItems as item}
@@ -21,6 +23,7 @@
 </header>
 
 <style>
+    
     header{
         background: rgba(red, green, blue, alpha);
         height: 50px; 
@@ -43,6 +46,8 @@
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
+    
     @media only screen and (max-width: 768px){
         
            

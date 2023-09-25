@@ -1,9 +1,9 @@
 <script>
-    import Header  from "./components/Header.svelte"
-    import Container from "./components/Container.svelte";
-    import Projects from "./components/Projects.svelte";
-    import Portfoilo from "./components/Portfoilo.svelte";
-    import Contact from "./components/Contact.svelte";
+    import Header  from "$lib/components/Header.svelte"
+    import Container from "$lib/components/Container.svelte";
+    import Projects from "$lib/components/Projects.svelte";
+    import Portfoilo from "$lib/components/Portfoilo.svelte";
+    import Contact from "$lib/components/Contact.svelte";
     import '../app.css'
 
     let activeItem = "Portfolio";
