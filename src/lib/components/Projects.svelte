@@ -25,7 +25,7 @@
             <Card header={project.name} hover={true} on:click={() => toggleModal(project)} >
                 <p class="description-head text-center font-bold">Description</p>
                 <div class="p-5">
-                    <p class="m-0">{project.description}</p>
+                    <p class="m-0 description-text">{project.description}</p>
                 </div>
             </Card>
         </div>
@@ -38,5 +38,8 @@
 <style>
     .description-head{
         margin: 10px 0;
+    }
+    .description-text{
+        font-family: Garamond, serif;
     }
 </style>
