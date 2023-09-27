@@ -20,7 +20,7 @@
     <p class="font-bold p-20 m-0">
         I am studying programming and have completed H3.
         I am in a school internship at euc-syd where I code in C# and SQL.
-        In my spare time I learn new languages ​​or frameworks, The next thing I set out to learn is Phyton
+        In my spare time I learn new languages ​​or frameworks, The next thing I set out to learn is Python.
     </p>
     <br>
     <Button class="color-bg-purple color-white hover-1 shadow" on:click={() => dispatch('navChange', 'Projects')}>Projects</Button>
