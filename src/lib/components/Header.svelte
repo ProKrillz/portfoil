@@ -4,11 +4,10 @@
     
     const dispatch = createEventDispatcher();
     
-    let navItems = ["Portfolio", "Projects", "Contact"]
+    let navItems = ["Portfolio", "Projects"]
 </script>
 
-<header class="d-flex p-5">
-    
+<header class="d-flex p-5"> 
     <a class="mr-a" href="https://github.com/ProKrillz" target="_blank">
         <!-- <img class="pointer h-p-100" src="./img/GitLogo.png"/> -->
         <Github class="logo filler-white hover-faded"/>
@@ -23,7 +22,6 @@
 </header>
 
 <style>
-    
     header{
         background: rgba(red, green, blue, alpha);
         height: 50px; 
@@ -45,11 +43,5 @@
     p:hover::after{
         transform: scaleX(1);
         transform-origin: bottom left;
-    }
-
-    
-    @media only screen and (max-width: 768px){
-        
-           
     }
 </style>

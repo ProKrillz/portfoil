@@ -19,7 +19,7 @@
 </div>
 <div class="flex-box">  
     {#each $Projects as project}
-        <div class="flex-item">
+        <div class="flex-item content-center">
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-static-element-interactions -->
             <Card header={project.name} hover={true} on:click={() => toggleModal(project)} >

@@ -5,7 +5,7 @@
 
 <div class="mt-5 p-2">
     <h3 class="text-center m-0">{targetProject.name}</h3> 
-
+    
     <p>Description</p>
     <div class="description">    
          <p>{targetProject.description}</p>

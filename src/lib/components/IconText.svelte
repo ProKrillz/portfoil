@@ -10,6 +10,8 @@
     import Svelte from "./icons/Svelte.svelte";
     import Bootstrap from "./icons/Bootstrap.svelte";
     import Github from "./icons/Github.svelte";
+    import Gitlab from "./icons/Gitlab.svelte"
+    import Gmail from "./icons/Gmail.svelte";
     import { onMount } from "svelte";
     
     export let iconName;
@@ -53,11 +55,16 @@
             case "Github":
                 selected = Github;
                 break;
+            case "Gitlab":
+                selected = Gitlab;
+                break;
+            case "Gmail":
+                selected = Gmail;
+                break;
             default:
                 break;
         }
-    });
-    
+    }); 
 </script>
 
 <div class="d-flex p-5">

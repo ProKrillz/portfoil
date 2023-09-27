@@ -3,32 +3,11 @@
     import Button from "./shared/Button.svelte";
     import {createEventDispatcher} from 'svelte'
     import IconText from "./IconText.svelte";
+    import Linkin from "./icons/Linkin.svelte";
+    import Gmail from "./icons/Gmail.svelte";
+    import Skills from "../storges/Skills.js"
 
     const dispatch = createEventDispatcher();
-   
-    const skills = [
-        { 
-            header: "Programming Languages", 
-            names: ["Csharp", "JavaScript", "ArduinoC"]
-        },
-        {
-            header: "Database",
-            names: ["MicrosoftSQL", "MongoDB"]
-        },
-        {
-            header: "Web Development",
-            names: ["Html5", "Css", "NodeJS", "Svelte", "Bootstrap"]
-        },
-        {
-            header: "Version Control",
-            names: ["Github"]
-        },
-        {
-            header: "GUI Development",
-            names: ["WPF"]
-        }
-    ]
-
 </script>
 
 <div class="text-center">
@@ -38,17 +17,18 @@
         Full stack developer
     </p>
  
-    <p class="font-bold">
+    <p class="font-bold p-20 m-0">
         I am studying programming and have completed H3.
-        I am in a school internship where I code in C# and SQL.
+        I am in a school internship at euc-syd where I code in C# and SQL.
+        In my spare time I learn new languages ​​or frameworks, The next thing I set out to learn is Phyton
     </p>
     <br>
     <Button class="color-bg-purple color-white hover-1 shadow" on:click={() => dispatch('navChange', 'Projects')}>Projects</Button>
 </div>
 
-<div class="flex-box">
-    {#each skills as skill}
-    <div class="flex-item">
+<div class="flex-box mt-13">
+    {#each $Skills as skill}
+    <div class="flex-item content-center">
         <Card header={skill.header}>
             {#each skill.names as name}
             <IconText iconName={name}/>
@@ -56,6 +36,20 @@
         </Card>
     </div>
     {/each}
+</div>
+
+<div class="flex-box mt-13">
+    <div class="flex-item-100 content-center">
+        <a href="https://www.linkedin.com/in/thomasdamkj%C3%A6r/" target="_blank">
+            <Linkin class="logo hover-faded"/>
+        </a>
+        
+        <div class="d-flex">
+            <a href="mailto:thomasdamkjaer@gmail.com">
+                <Gmail class="logo hover-faded"/>
+            </a>
+        </div>
+    </div>
 </div>
 
 <style>

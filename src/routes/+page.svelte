@@ -3,7 +3,6 @@
     import Container from "$lib/components/Container.svelte";
     import Projects from "$lib/components/Projects.svelte";
     import Portfoilo from "$lib/components/Portfoilo.svelte";
-    import Contact from "$lib/components/Contact.svelte";
     import '../app.css'
 
     let activeItem = "Portfolio";
@@ -20,7 +19,5 @@
     <Portfoilo on:navChange={navChange}/>
     {:else if activeItem === "Projects" }
     <Projects></Projects>
-    {:else if activeItem === "Contact"}
-    <Contact></Contact>
     {/if}
 </Container>
