@@ -38,7 +38,7 @@
     {/each}
 </div>
 
-<div class="flex-box mt-13">
+<div class="flex-box mt-10">
     <div class="flex-item-100 content-center">
         <a href="https://www.linkedin.com/in/thomasdamkj%C3%A6r/" target="_blank">
             <Linkin class="logo hover-faded"/>
