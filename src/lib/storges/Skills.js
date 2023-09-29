@@ -3,32 +3,53 @@ import { writable } from "svelte/store";
 const Skills = writable([
     { 
         header: "Programming Languages", 
-        names: ["Csharp", "JavaScript", "ArduinoC"]
+        names: [{ icon: "Csharp", text: "Csharp" }, 
+        { icon: "JavaScript", text: "JavaScript" },
+        { icon: "ArduinoC", text: "ArduinoC" }]
     },
     {
-        header: "Database",
-        names: ["MicrosoftSQL", "MongoDB"]
+        header: "FrameWork",
+        names: [ 
+            { icon: ".NETCORE", text: ".NET CORE" }, 
+            { icon: ".NETCORE", text: "Razor"},
+            { icon: ".NETCORE", text: "Blazor"},
+            { icon: ".NETCORE", text: "EF Core"}]
     },
     {
         header: "Web Development",
-        names: ["Html5", "Css", "NodeJS", "Svelte", "Bootstrap"]
+        names: [
+            { icon: "Html5", text: "Html5"},
+            { icon: "Css", text: "Css" },
+            { icon: "NodeJS", text: "NodeJS" }, 
+            { icon: "Svelte", text: "Svelte" },
+            { icon: "Bootstrap", text: "Bootstrap" }]
+    },
+    {
+        header: "Database",
+        names: [
+            { icon: "MicrosoftSQL", text: "MicrosoftSQL" }, 
+            { icon: "MongoDB", text: "MongoDB" }]
     },
     {
         header: "Version Control",
-        names: ["Github", "Gitlab"]
-    },
-    {
-        header: "GUI Development",
-        names: ["WPF"]
+        names: [
+            { icon: "Github", text: "Github" },
+            { icon: "Gitlab", text: "Gitlab" }]
     },
     {
         header: "Big Data",
-        names: ["ETL (Extract, Transform, Load)", "ELT (Extract, Load, Transform)"]
+        names: [
+            { text: "ETL (Extract, Transform, Load)" }, 
+            { text: "ELT (Extract, Load, Transform)" }]
+    },
+    {
+        header: "GUI Development",
+        names: [{text: "WPF"}]
     },
     {
         header: "APIs",
-        names: ["REST API"]
-    }
+        names: [{ text: "REST API" }]
+    },
 ]);
 
 export default Skills;

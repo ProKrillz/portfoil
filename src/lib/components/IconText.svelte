@@ -12,10 +12,12 @@
     import Github from "./icons/Github.svelte";
     import Gitlab from "./icons/Gitlab.svelte"
     import Gmail from "./icons/Gmail.svelte";
+    import Dotnet from "./icons/Dotnet.svelte"
     import { onMount } from "svelte";
     
     export let iconName;
-    
+    export let iconText;
+
     let selected;
 
      // icons
@@ -61,6 +63,9 @@
             case "Gmail":
                 selected = Gmail;
                 break;
+            case ".NETCORE":
+                selected = Dotnet;
+                break;
             default:
                 break;
         }
@@ -69,7 +74,7 @@
 
 <div class="d-flex p-5">
     <svelte:component this={selected} class="h-20"/>
-    <p class="icon-text">{iconName}</p>
+    <p class="icon-text">{iconText}</p>
 </div>
 
 <style>

@@ -31,7 +31,7 @@
     <div class="flex-item content-center">
         <Card header={skill.header}>
             {#each skill.names as name}
-            <IconText iconName={name}/>
+            <IconText iconName={name.icon} iconText={name.text}/>
             {/each}
         </Card>
     </div>
